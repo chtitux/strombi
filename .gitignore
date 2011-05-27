@@ -1,0 +1,4 @@
+app/config/parameters.ini
+vendor/*
+app/logs/*
+app/cache/*

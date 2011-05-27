@@ -1,0 +1,12 @@
+[parameters]
+    database_driver="pdo_mysql"
+    database_host="localhost"
+    database_name="strombi"
+    database_user="strombi"
+    database_password="just edit that"
+    mailer_transport="smtp"
+    mailer_host="localhost"
+    mailer_user=""
+    mailer_password=""
+    locale="en"
+    secret="d1f54f8a8c5db34e9ad0478945429f764"
