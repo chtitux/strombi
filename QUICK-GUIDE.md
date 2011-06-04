@@ -20,6 +20,7 @@ QUICK GUIDE to symfony2
 
 == Code
  1. Bundle
+
 ```php
 // Fichier ./src/IARISS/TodoBundle/IARISSTodoBundle.php
 <?php
