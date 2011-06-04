@@ -93,7 +93,7 @@ todo_list:
 
 ```
 
-= La configuration de l'application pour intéreger le Bundle
+# La configuration de l'application pour intéreger le Bundle
 
  1. Enregistrer l'« entreprise ». Avoir un `./app/autoload.php` qui ressemble à 
 
@@ -142,7 +142,7 @@ todo:
     resource: "@IARISSTodoBundle/Resources/config/routing.yml"
 ```
 
-= Premiers tests
+# Premiers tests
 
 Si vous avez bien tout suivi, vous devez avoir une arborescence qui ressemble à :
 
@@ -167,7 +167,7 @@ src/
 
 Si vous allez sur `http://strombi.localhost/app_dev.php/todo/MyNameIsToto`, vous devriez voir « Hello MyNameIsToto » s'afficher.
 
-= Premier objet Doctrine
+# Premier objet Doctrine
 
 Les objets Doctrine sont décrits par 2 fichiers : le premier dans `Entity/`, et qui sera l'objet que stockera PHP, et le second dans `Resources/config/doctrine/Monobjet.orm.yml` , qui fera le lien avec la base (MySQL ici)
 Le premier fichier pourra être généré à partir du second.
