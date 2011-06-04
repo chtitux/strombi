@@ -48,9 +48,9 @@ use Symfony\Component\HttpFoundation\Response;
 
 class TodoController extends Controller
 {
-  public function indexAction()
+  public function indexAction($name)
   {
-    return $this->render('IARISSTodoBundle:Todo:index.html.twig', array('name' => "First task"));
+    return $this->render('IARISSTodoBundle:Todo:index.html.twig', array('name' => $name));
 
   }
 }
@@ -61,7 +61,7 @@ class TodoController extends Controller
 # ./src/IARISS/TodoBundle/Resources/config/routing.yml
 
 todo_list:
-    pattern:  /todo/
+    pattern:  /todo/{name}
     defaults: { _controller: IARISSTodoBundle:Todo:index }
 ```
 
@@ -125,3 +125,29 @@ class AppKernel extends Kernel
 todo:
     resource: "@IARISSTodoBundle/Resources/config/routing.yml"
 ```
+
+= Premiers tests
+Si vous avez bien tout suivi, vous devez avoir une arborescence qui ressemble à :
+
+```
+src/
+└── IARISS
+    └── TodoBundle
+        ├── Controller
+        │   └── TodoController.php
+        ├── Entity
+        ├── IARISSTodoBundle.php
+        ├── Repository
+        └── Resources
+            ├── config
+            │   ├── doctrine
+            │   └── routing.yml
+            └── views
+                └── Todo
+                    └── index.html.twig
+
+```
+
+Si vous allez sur `http://strombi.localhost/app_dev.php/todo/MyNameIsToto`, vous devriez voir « Hello MyNameIsToto » s'afficher.
+
+= Premier objet Doctrine
