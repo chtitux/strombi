@@ -94,7 +94,7 @@ $loader->registerNamespaces(array(
     'IARISS'           => __DIR__.'/../src',
 ));
 // ...
-``
+```
 
  2. Enregistrer le Bundle. Avoir un AppKernel.php qui ressemble à
 
