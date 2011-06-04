@@ -15,7 +15,7 @@ QUICK GUIDE to symfony2
 ```
  mkdir Controller  Entity  Repository  Resources
  mkdir -p Resources/config/doctrine
- mkdir -p Resources views
+ mkdir -p Resources/views/Todo
 ```
 
 # Code
@@ -46,12 +46,33 @@ namespace IARISS\TodoBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
-class DefaultController extends Controller
+class TodoController extends Controller
 {
-  public function indexAction($name)
+  public function indexAction()
   {
-    return $this->render('IARISSTodoBundle:Default:index.html.twig');
+    return $this->render('IARISSTodoBundle:Todo:index.html.twig', array('name' => "First task"));
 
   }
 }
+```
+ 3. Le fichier pour router le Bundle
+
+```yaml
+# ./src/IARISS/TodoBundle/Resources/config/routing.yml
+
+todo_list:
+    pattern:  /todo/
+    defaults: { _controller: IARISSTodoBundle:Todo:index }
+```
+
+ 4. La vue
+
+```twig
+ {# src/IARISS/TodoBundle/Resources/views/Todo/index.html.twig #}
+ {% extends '::layout.html.twig' %}
+
+ {% block body %}
+     Hello {{ name }}!
+ {% endblock %} 
+
 ```
