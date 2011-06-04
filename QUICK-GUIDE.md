@@ -1,13 +1,13 @@
 QUICK GUIDE to symfony2
 
-== Installation
+# Installation
 
  1. Télécharger Symfony Standard Edition avec Vendors
  2. Le décompresser 
  3. Placer le DocumentRoot sur `./web/`
  4. Apache doit avoir les droits d'écriture dans `./app/cache/`
 
-== Premier Bundle
+# Premier Bundle
 
  1. Créer un dossier portant le nom de l'enteprise dans `./src/` (ex `IARISS/`)
  2. Créer un dossier portant le nom du Bundle dans ce dossier, et y créer 4 autres dossiers : `Controller, Entity, Repository` et `Resources` :
@@ -18,12 +18,13 @@ QUICK GUIDE to symfony2
  mkdir -p Resources views
 ```
 
-== Code
+# Code
+
  1. Bundle
 
 ```php
-// Fichier ./src/IARISS/TodoBundle/IARISSTodoBundle.php
 <?php
+// Fichier ./src/IARISS/TodoBundle/IARISSTodoBundle.php
 
 namespace IARISS\TodoBundle;
 
@@ -39,7 +40,6 @@ class IARISSTodoBundle extends Bundle
 ```php
 <?php
 // Fichier ./src/IARISS/TodoBundle/Controller/DefaultController.php
-<?php
 
 namespace IARISS\TodoBundle\Controller;
 
