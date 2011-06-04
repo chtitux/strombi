@@ -55,7 +55,7 @@ class IARISSTodoBundle extends Bundle
 
 ```php
 <?php
-// Fichier ./src/IARISS/TodoBundle/Controller/DefaultController.php
+// Fichier ./src/IARISS/TodoBundle/Controller/TodoController.php
 
 namespace IARISS\TodoBundle\Controller;
 
@@ -222,6 +222,7 @@ class TaskRepository extends EntityRepository
 ```
 
  4. Créez la base correspondante, puis la table si ce n'est pas déjà fait :
+
 ```
  ./app/console  doctrine:database:create 
  ./app/console  doctrine:schema:create
