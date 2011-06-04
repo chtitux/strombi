@@ -76,3 +76,45 @@ todo_list:
  {% endblock %} 
 
 ```
+
+= La configuration de l'application pour intéreger le Bundle
+
+ 1. Enregistrer l'« entreprise ». Avoir un `./app/autoload.php` qui ressemble à 
+
+```php
+<?php
+
+use Symfony\Component\ClassLoader\UniversalClassLoader;
+
+$loader = new UniversalClassLoader();
+$loader->registerNamespaces(array(
+    'Symfony'          => array(__DIR__.'/../vendor/symfony/src', __DIR__.'/../vendor/bundles'),
+    'Sensio'           => __DIR__.'/../vendor/bundles',
+// ...
+    'IARISS'           => __DIR__.'/../src',
+));
+// ...
+``
+
+ 2. Enregistrer le Bundle. Avoir un AppKernel.php qui ressemble à
+
+```php
+<?php
+
+use Symfony\Component\HttpKernel\Kernel;
+use Symfony\Component\Config\Loader\LoaderInterface;
+use Symfony\Component\ClassLoader\DebugUniversalClassLoader;
+use Symfony\Component\HttpKernel\Debug\ErrorHandler;
+use Symfony\Component\HttpKernel\Debug\ExceptionHandler;
+
+class AppKernel extends Kernel
+{
+    public function registerBundles()
+    {
+        $bundles = array(
+            new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
+// ...
+            new IARISS\TodoBundle\IARISSTodoBundle(),
+        );
+// ...
+```
