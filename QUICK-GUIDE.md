@@ -84,7 +84,7 @@ todo_list:
  4. La vue
 
 ```twig
- {# src/IARISS/TodoBundle/Resources/views/Todo/index.html.twig #}
+ {# src/IARISS/TodoBundle/Resources/views/Todo/base.html.twig #}
  {% extends '::layout.html.twig' %}
 
  {% block body %}
