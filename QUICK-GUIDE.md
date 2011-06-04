@@ -118,3 +118,10 @@ class AppKernel extends Kernel
         );
 // ...
 ```
+
+ 3. Enregistrer le fichier de route. Ajouter à `./app/config/routing.yml` les lignes
+
+```yaml
+todo:
+    resource: "@IARISSTodoBundle/Resources/config/routing.yml"
+```
