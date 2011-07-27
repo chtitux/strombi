@@ -1,0 +1,15 @@
+{# ./Resources/views/Etudiant/index.html.twig #}
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <h1>Liste des étudiants</h1>
+
+<ul>
+{% for etudiant in etudiants %}
+  <li><a href="{{ path('etudiant_show', {'id' : }) }}">{{ etudiant }}</a></li>
+{% else %}
+  <li><i>Pas d'étudiants</i></li>
+{% endfor %}
+
+
+{% endblock %} 

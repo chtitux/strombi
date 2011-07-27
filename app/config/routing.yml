@@ -2,3 +2,6 @@
 #_internal:
 #   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
 #   prefix:   /_internal
+
+etudiant:
+    resource: "@ChtituxEtudiantBundle/Resources/config/routing.yml"

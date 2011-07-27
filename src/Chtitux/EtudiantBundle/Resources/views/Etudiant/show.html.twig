@@ -1,0 +1,13 @@
+{# ./Resources/views/Etudiant/show.html.twig #}
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <h1>Étudiant {{ etudiant }}</h1>
+
+Prénom : {{ etudiant.firstname }}<br/>
+Nom:     {{ etudiant.lastname  }}<br/>
+
+<hr/>
+<a href="{{ path('etudiant_list') }}">Retour à la liste</a>
+
+{% endblock %} 

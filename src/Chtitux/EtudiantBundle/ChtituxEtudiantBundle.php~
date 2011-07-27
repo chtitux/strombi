@@ -1,0 +1,10 @@
+<?php
+// Fichier ./src/Chtitux/StrombiBundle/ChtituxStrombiBundle.php
+
+namespace Chtitux\StrombiBundle;
+
+use Symfony\Component\HttpKernel\Bundle\Bundle;
+
+class ChtituxStrombiBundle extends Bundle
+{
+}
