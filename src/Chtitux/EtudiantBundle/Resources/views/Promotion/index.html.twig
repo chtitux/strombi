@@ -1,11 +1,14 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
+<a href="{{ path('promotions', {}) }}">Accueil</a>
+<hr/>
+
     <h1>Liste des promotions</h1>
 
 <ul>
 {% for promotion in promotions %}
-  <li><a href="{{ path('promotion_show', {'id' : promotion.id}) }}">{{ promotion }}</a></li>
+  <li><a href="{{ path('promotion_filieres', {'promotion_slug' : promotion.slug}) }}">{{ promotion }}</a></li>
 {% else %}
   <li><i>Pas de promotions</i></li>
 {% endfor %}

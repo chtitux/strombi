@@ -1,0 +1,28 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+<a href="{{ path('promotions', {}) }}">Accueil</a>
+ > 
+<a href="{{ path('promotion_filieres', {'promotion_slug' : promotion.slug}) }}">{{ promotion }}</a>
+<hr/>
+
+<h1>Promotion {{ promotion }}</h1>
+
+Nom:     {{ promotion.nom }}<br/>
+
+<ul>
+{% for filiere in filieres %}
+  <li><a href="{{ path('promotion_filiere_etudiants', {
+  'promotion_slug': promotion.slug,
+  'filiere_slug'  : filiere.slug,
+} )
+}}">{{ filiere }}</a></li>
+{% else %}
+  <li><i>pas de filière</i></li>
+{% endfor %}
+</ul>
+
+<hr/>
+<a href="{{ path('promotion_list') }}">Retour à la liste des promotions</a>
+
+{% endblock %} 

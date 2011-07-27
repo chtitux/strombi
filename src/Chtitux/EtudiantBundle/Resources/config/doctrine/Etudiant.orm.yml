@@ -16,6 +16,12 @@ Chtitux\EtudiantBundle\Entity\Etudiant:
       promotion:
           targetEntity: Promotion
           mappedBy: etudiant
+#           joinColumn:
+#             name: promotion_id
+#             referencedColumnName: id
       filiere:
           targetEntity: Filiere
           mappedBy: etudiant
+#           joinColumn:
+#             name: filiere_id
+#             referencedColumnName: id

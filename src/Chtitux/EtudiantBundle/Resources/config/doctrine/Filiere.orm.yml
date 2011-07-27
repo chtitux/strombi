@@ -14,3 +14,6 @@ Chtitux\EtudiantBundle\Entity\Filiere:
     etudiants:
       targetEntity: Etudiant
       mappedBy: filiere
+#       joinColumn:
+#         name: id
+#         referencedColumnName: id

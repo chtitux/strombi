@@ -13,8 +13,7 @@ class PromotionController extends Controller
     public function indexAction()
     {
 
-        $repository = $this->getDoctrine()->getRepository('ChtituxEtudiantBundle:Promotion');
-        $promotions = $repository->findAll();
+        $promotions = $this->getDoctrine()->getRepository('ChtituxEtudiantBundle:Promotion')->findAll();
 
         return $this->render('ChtituxEtudiantBundle:Promotion:index.html.twig', array('promotions' => $promotions));
 
@@ -23,14 +22,33 @@ class PromotionController extends Controller
     public function showAction($id)
     {
 
-        $repository = $this->getDoctrine()->getRepository('ChtituxEtudiantBundle:Promotion');
-        $promotion = $repository->find($id);
+        $promotion = $this->getDoctrine()->getRepository('ChtituxEtudiantBundle:Promotion')->find($id);
 
         if(!$promotion)
                 throw $this->createNotFoundException('No promotion found for id '.$id);
 
 
-        return $this->render('ChtituxEtudiantBundle:Promotion:show.html.twig', array('promotion' => $promotion));
+        return $this->render('ChtituxEtudiantBundle:Promotion:show.html.twig', array(
+          'promotion'   => $promotion,
+        ));
+
+    }
+
+    public function showFilieresAction($promotion_slug)
+    {
+
+        $promotion = $this->getDoctrine()->getRepository('ChtituxEtudiantBundle:Promotion')->findBySlug($promotion_slug);
+
+        if(count($promotion) == 0)
+                throw $this->createNotFoundException('No promotion found for slug '.$promotion_slug);
+
+        $filieres = $this->getDoctrine()->getRepository('ChtituxEtudiantBundle:Filiere')->findAll();
+
+
+        return $this->render('ChtituxEtudiantBundle:Promotion:show_filieres.html.twig', array(
+          'promotion'   => $promotion[0],
+          'filieres'    => $filieres,
+        ));
 
     }
 }

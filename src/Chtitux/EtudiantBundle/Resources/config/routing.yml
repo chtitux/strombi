@@ -25,3 +25,16 @@ filiere_list:
 filiere_show:
     pattern:  /filieres/{id}
     defaults: { _controller: ChtituxEtudiantBundle:Filiere:show }
+
+# Début des vrais routes
+promotions:
+    pattern:    /strombi/
+    defaults: { _controller: ChtituxEtudiantBundle:Promotion:index }
+
+promotion_filieres:
+    pattern:    /strombi/{promotion_slug}
+    defaults: { _controller: ChtituxEtudiantBundle:Promotion:showFilieres }
+
+promotion_filiere_etudiants:
+    pattern:    /strombi/{promotion_slug}/{filiere_slug}
+    defaults: { _controller: ChtituxEtudiantBundle:Filiere:showEtudiants }

@@ -5,6 +5,14 @@
 
 Nom:     {{ promotion.nom }}<br/>
 
+<ul>
+{% for filiere in filieres %}
+  <li><a href="{{ path('promotion_filieres', {'promotion': promotion } ) }}">{{ filiere }}</a></li>
+{% else %}
+  <li><i>pas de filière</i></li>
+{% endfor %}
+</ul>
+
 <hr/>
 <a href="{{ path('promotion_list') }}">Retour à la liste des promotions</a>
 
