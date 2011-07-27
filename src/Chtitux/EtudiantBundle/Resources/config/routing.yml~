@@ -1,9 +1,0 @@
-# ./Resources/config/routing.yml
-
-etudiant_list:
-    pattern:  /etudiants/
-    defaults: { _controller: ChtituxEtudiantBundle:Etudiant:index }
-
-etudiant_show:
-    pattern:  /etudiants/{id}
-    defaults: { _controller: ChtituxEtudiantBundle:Etudiant:show }
