@@ -1,0 +1,16 @@
+Chtitux\EtudiantBundle\Entity\Promotion:
+  type: entity
+  table: promotion
+  repositoryClass: Chtitux\EtudiantBundle\Repository\PromotionRepository
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+      nom:              { type: string, length: 255 }
+      slug:             { type: string, length: 255 }
+  oneToMany:
+    etudiants:
+      targetEntity: Etudiant
+      mappedBy: promotion

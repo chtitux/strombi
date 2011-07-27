@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <h1>Promotion {{ promotion }}</h1>
+
+Nom:     {{ promotion.nom }}<br/>
+
+<hr/>
+<a href="{{ path('promotion_list') }}">Retour à la liste des promotions</a>
+
+{% endblock %} 

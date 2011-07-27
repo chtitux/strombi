@@ -7,3 +7,12 @@ etudiant_list:
 etudiant_show:
     pattern:  /etudiants/{id}
     defaults: { _controller: ChtituxEtudiantBundle:Etudiant:show }
+
+
+promotion_list:
+    pattern:  /promotions/
+    defaults: { _controller: ChtituxEtudiantBundle:Promotion:index }
+
+promotion_show:
+    pattern:  /promotions/{id}
+    defaults: { _controller: ChtituxEtudiantBundle:Promotion:show }

@@ -12,3 +12,7 @@ Chtitux\EtudiantBundle\Entity\Etudiant:
       lastname:         { type: string, length: 255 }
       gender:           { type: string, length: 25 }
       description:      { type: string, length: 4000 }
+  manyToOne:
+      promotion:
+          targetEntity: Promotion
+          mappedBy: etudiant

@@ -1,0 +1,14 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <h1>Liste des promotions</h1>
+
+<ul>
+{% for promotion in promotions %}
+  <li><a href="{{ path('promotion_show', {'id' : promotion.id}) }}">{{ promotion }}</a></li>
+{% else %}
+  <li><i>Pas de promotions</i></li>
+{% endfor %}
+
+
+{% endblock %} 

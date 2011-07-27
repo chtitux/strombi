@@ -129,4 +129,29 @@ class Etudiant
     {
         return $this->getFirstname()." ".$this->getLastname();
     }
+    /**
+     * @var Chtitux\EtudiantBundle\Entity\Promotion
+     */
+    private $promotion;
+
+
+    /**
+     * Set promotion
+     *
+     * @param Chtitux\EtudiantBundle\Entity\Promotion $promotion
+     */
+    public function setPromotion(\Chtitux\EtudiantBundle\Entity\Promotion $promotion)
+    {
+        $this->promotion = $promotion;
+    }
+
+    /**
+     * Get promotion
+     *
+     * @return Chtitux\EtudiantBundle\Entity\Promotion 
+     */
+    public function getPromotion()
+    {
+        return $this->promotion;
+    }
 }
