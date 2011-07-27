@@ -69,13 +69,18 @@ h2
 
 }
 
+h2.configure-error
+{
+    background-color: #CC514F;
+}
+
 p
 {
     line-height:    20px;
     padding-bottom: 20px;
 }
 
-ul#demo-list a
+ul a
 {
     background: url(../images/blue-arrow.png) no-repeat right 6px;
     padding-right: 10px;
@@ -113,7 +118,7 @@ ul li
     margin: 0 auto;
 }
 
-.symfony-content
+#symfony-content
 {
     background-color:           white;
     border:                     1px solid #DFDFDF;
@@ -122,19 +127,137 @@ ul li
     -webkit-border-radius:      16px;
     border-radius:              16px;
     margin-bottom:              20px;
-    word-wrap:                  break-word;
+}
+
+#symfony-header
+{
+    position: relative;
+    padding: 30px 30px 20px 30px;
+}
+
+#symfony-wrapper
+{
+    width:  970px;
+    margin: 0 auto;
+}
+
+#symfony-content
+{
+    background-color:           white;
+    border:                     1px solid #DFDFDF;
+    padding:                    50px;
+    -moz-border-radius:         16px;
+    -webkit-border-radius:      16px;
+    border-radius:              16px;
+    margin-bottom:              20px;
+}
+html, body
+{
+    background-color: #EFEFEF;
+}
+
+body
+{
+    font-size:        14px;
+    font-family:      "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+    color:            #313131;
+}
+
+a
+{
+    color:           #08C;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+strong
+{
+    font-weight: bold;
+}
+
+#symfony-header
+{
+    position: relative;
+    padding: 30px 30px 20px 30px;
+}
+
+#symfony-wrapper
+{
+    width:  970px;
+    margin: 0 auto;
+}
+
+#symfony-content
+{
+    background-color:           white;
+    border:                     1px solid #DFDFDF;
+    padding:                    50px;
+    -moz-border-radius:         16px;
+    -webkit-border-radius:      16px;
+    border-radius:              16px;
+    margin-bottom:              20px;
+}
+html, body
+{
+    background-color: #EFEFEF;
+}
+
+body
+{
+    font-size:        14px;
+    font-family:      "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+    color:            #313131;
+}
+
+a
+{
+    color:           #08C;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+strong
+{
+    font-weight: bold;
+}
+
+#symfony-header
+{
+    position: relative;
+    padding: 30px 30px 20px 30px;
+}
+
+#symfony-wrapper
+{
+    width:  970px;
+    margin: 0 auto;
+}
+
+#symfony-content
+{
+    background-color:           white;
+    border:                     1px solid #DFDFDF;
+    padding:                    50px;
+    -moz-border-radius:         16px;
+    -webkit-border-radius:      16px;
+    border-radius:              16px;
+    margin-bottom:              5px;
 }
 
 #symfony-search
 {
     position: absolute;
+
     top:   50px;
     right: 30px;
-}
-
-#symfony-search input[type="search"]
-{
-    -webkit-appearance: textfield;
 }
 
 #symfony-search-field
@@ -156,7 +279,7 @@ ul li
     display: none;
 }
 
-input[type=text], input[type=password]
+input[type=text]
 {
     border:      1px solid #DADADA;
     background:  white url(../images/field-background.gif) repeat-x left top;
@@ -215,79 +338,101 @@ input[type=text], input[type=password]
     filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#a7da39', endColorstr='#6a9211');
 }
 
-.symfony-blocks-welcome
+.symfony-block-steps span
 {
-    overflow: hidden;
+    display: inline-block;
+    padding: 2px 3px;
+  font-size:      11px;
+  line-height:    15px;
+  color:          #868686;
+  font-weight:    bold;
+  text-transform: uppercase;
 }
 
-.symfony-blocks-welcome > div
+.symfony-block-steps span.selected
 {
-    background-color: whitesmoke;
-    float:            left;
-    width:            240px;
-    margin-right:     14px;
-    text-align:       center;
-    padding:          26px 20px;
+    background-color: #aacd4e;
+    color:            #FFFFFF;
 }
 
-.symfony-blocks-welcome > div.block-demo
+h1
 {
-    margin-right: 0;
+    margin-top: 10px;
+    font-size: 26px;
 }
 
-.symfony-blocks-welcome .illustration
+.symfony-form-row
 {
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 
-.symfony-blocks-help
+.symfony-form-column
 {
-    overflow: hidden;
-}
-
-.symfony-blocks-help
-{
-    margin-top: 30px;
-    padding:    18px;
-    border:     1px solid #E6E6E6;
-}
-
-.symfony-blocks-help > div
-{
-    width:        254px;
-    float:        left;
-}
-
-.flash-message
-{
-    padding: 10px;
-    margin: 5px;
-    margin-top: 15px;
-    background-color: #ffe;
-}
-
-.error
-{
-    color: red;
-}
-
-#login label, #contact_form label
-{
-    display: block;
+    width: 430px;
     float: left;
-    width: 90px;
 }
 
-ul#menu
+.symfony-form-footer
 {
-    float: right;
-    margin-bottom: 20px;
-    padding-left: 0;
+    padding-top: 20px;
+    clear: both;
 }
 
-#menu li
+.symfony-form-field
 {
-    padding-left: 0;
-    margin-right: 10px;
-    display: inline;
+    height: 20px;
+}
+
+.symfony-form-row label
+{
+    display:        block;
+    padding-bottom: 8px;
+}
+
+.symfony-form-field input[type=text],
+.symfony-form-field input[type=password],
+.symfony-form-field textarea,
+.symfony-form-field select
+{
+    font-size: 13px;
+    color:     #565656;
+    width:     200px;
+}
+
+.symfony-form-field input[type=text],
+.symfony-form-field input[type=password],
+.symfony-form-field textarea
+{
+    border:     1px solid #dadada;
+    background: #FFFFFF url(../images/background-textfield.gif) repeat-x left top;
+    width:      194px;
+    padding:    5px 6px;
+}
+
+.symfony-form-errors ul
+{
+    padding: 0;
+}
+
+.symfony-form-errors li
+{
+    background:  url(../images/notification.gif) no-repeat left 6px;
+    font-size:   11px;
+    line-height: 16px;
+    color:       #759e1a;
+    padding:     10px 25px;
+}
+
+.symfony-configuration
+{
+    margin: 10px 0;
+    width:  100%;
+    height: 240px;
+}
+
+.version
+{
+    text-align: right;
+    font-size: 10px;
+    margin-right: 20px;
 }
