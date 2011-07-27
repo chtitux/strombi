@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <h1>Filière {{ filiere }}</h1>
+
+Nom:     {{ filiere.nom }}<br/>
+
+<hr/>
+<a href="{{ path('filiere_list') }}">Retour à la liste des filières</a>
+
+{% endblock %} 

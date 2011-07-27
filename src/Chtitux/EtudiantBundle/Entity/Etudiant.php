@@ -154,4 +154,29 @@ class Etudiant
     {
         return $this->promotion;
     }
+    /**
+     * @var Chtitux\EtudiantBundle\Entity\Filiere
+     */
+    private $filiere;
+
+
+    /**
+     * Set filiere
+     *
+     * @param Chtitux\EtudiantBundle\Entity\Filiere $filiere
+     */
+    public function setFiliere(\Chtitux\EtudiantBundle\Entity\Filiere $filiere)
+    {
+        $this->filiere = $filiere;
+    }
+
+    /**
+     * Get filiere
+     *
+     * @return Chtitux\EtudiantBundle\Entity\Filiere 
+     */
+    public function getFiliere()
+    {
+        return $this->filiere;
+    }
 }

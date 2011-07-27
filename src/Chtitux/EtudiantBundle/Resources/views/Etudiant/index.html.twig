@@ -6,7 +6,12 @@
 
 <ul>
 {% for etudiant in etudiants %}
-  <li><a href="{{ path('etudiant_show', {'id' : etudiant.id}) }}">{{ etudiant }}</a></li>
+  <li><a href="{{ path('etudiant_show', {'id' : etudiant.id}) }}">{{ etudiant }}</a><br/>
+
+    Promotion: {{ etudiant.promotion }}<br/>
+    Filière :  {{ etudiant.filiere }}
+
+</li>
 {% else %}
   <li><i>Pas d'étudiants</i></li>
 {% endfor %}

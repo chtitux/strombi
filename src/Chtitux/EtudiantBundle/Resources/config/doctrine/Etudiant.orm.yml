@@ -16,3 +16,6 @@ Chtitux\EtudiantBundle\Entity\Etudiant:
       promotion:
           targetEntity: Promotion
           mappedBy: etudiant
+      filiere:
+          targetEntity: Filiere
+          mappedBy: etudiant

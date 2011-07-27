@@ -1,0 +1,16 @@
+Chtitux\EtudiantBundle\Entity\Filiere:
+  type: entity
+  table: filiere
+  repositoryClass: Chtitux\EtudiantBundle\Repository\FiliereRepository
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+      nom:              { type: string, length: 255 }
+      slug:             { type: string, length: 255 }
+  oneToMany:
+    etudiants:
+      targetEntity: Etudiant
+      mappedBy: filiere

@@ -16,3 +16,12 @@ promotion_list:
 promotion_show:
     pattern:  /promotions/{id}
     defaults: { _controller: ChtituxEtudiantBundle:Promotion:show }
+
+
+filiere_list:
+    pattern:  /filieres/
+    defaults: { _controller: ChtituxEtudiantBundle:Filiere:index }
+
+filiere_show:
+    pattern:  /filieres/{id}
+    defaults: { _controller: ChtituxEtudiantBundle:Filiere:show }

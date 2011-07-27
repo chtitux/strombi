@@ -1,0 +1,14 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <h1>Liste des filières</h1>
+
+<ul>
+{% for filiere in filieres %}
+  <li><a href="{{ path('filiere_show', {'id' : filiere.id}) }}">{{ filiere }}</a></li>
+{% else %}
+  <li><i>Pas de filières</i></li>
+{% endfor %}
+
+
+{% endblock %} 
